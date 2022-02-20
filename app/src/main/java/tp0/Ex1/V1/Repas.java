@@ -1,8 +1,7 @@
-package tp0.V1;
+package tp0.Ex1.V1;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
 
 public class Repas {
 

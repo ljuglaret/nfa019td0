@@ -1,4 +1,4 @@
-package tp0.V1;
+package tp0.Ex1.V1;
 
 
 import java.util.*;
@@ -6,12 +6,14 @@ import java.util.*;
 class Commande{
     private Client cl;
     private Service service;
+    private Serveur serveur;
     private double somme = 0 ;
     private List<String> recap = new ArrayList<>();
 
-    public Commande(Client cl,Service service){
+    public Commande(Serveur serveur,Client cl,Service service){
         this.cl = cl;
         this.service = service;
+        this.serveur = serveur;
     }
 
     public void ajoutR(Repas repas){
@@ -35,7 +37,7 @@ class Commande{
     } 
    
     public void recap(){
-        System.out.println("commande pour la table "+ cl.getNumeroClient()+ " en "+service.nomService());
+        System.out.println("commande pour la table "+ cl.getNumeroClient()+ " en "+service.nomService() + " servie par : " +serveur.getPrenomServeur());
         for (String str : recap){
             System.out.println(str);
         }
