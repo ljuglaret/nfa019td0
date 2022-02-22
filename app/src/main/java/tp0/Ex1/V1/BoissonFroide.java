@@ -1,6 +1,5 @@
 package tp0.Ex1.V1;
 
-import java.util.Map;
 
 public class BoissonFroide {
     private int idBF;
@@ -12,18 +11,11 @@ public class BoissonFroide {
     }
     
     public String nom(){
-        m.creer();
-
-        Map<String,Map<Integer,String>> menu = m.getMenu();
-       
-        return  menu.get("boissonFroide").get(idBF);
+        return  m.getMenu().get("boissonFroide").get(idBF);
     }
     public double prix(){
-        m.creer();
-
         m.prixBoissonFroide();
-        Map<Integer,Double>prix = m.getPrixBF();
-        return prix.get(idBF);
+        return m.getPrixBF().get(idBF);
     }
 }
 

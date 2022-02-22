@@ -2,7 +2,7 @@ package tp0.Ex1.V1;
 
 
 public class MainV1 {
-    public static void exemple(){
+    public static void exemple() throws Exception{
         Client cl = new Client(1);
         Repas repas = new Repas(0);
         Serveur serveur = new Serveur(1234,"toto");

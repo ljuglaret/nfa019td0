@@ -4,10 +4,15 @@
 package tp0;
 
 import  tp0.Ex1.V1.MainV1;
+import  tp0.Ex1.V2.MainV2;
+import tp0.Ex1.V3.MainV3;
 
 public class App {
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         MainV1.exemple();
+        MainV2.exemple();
+        MainV3.exemple();
+
     }
 }

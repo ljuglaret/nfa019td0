@@ -12,14 +12,12 @@ public class BoissonFroideA {
     }
     
     public String nom(){
-        m.creer();
 
         Map<String,Map<Integer,String>> menu = m.getMenu();
        
         return  menu.get("boissonFroideA").get(idBFA);
     }
     public double prix(){
-        m.creer();
 
         m.prixBoissonFroideA();
         Map<Integer,Double>prix = m.getPrixBFA();

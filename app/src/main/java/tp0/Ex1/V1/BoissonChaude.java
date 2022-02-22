@@ -1,29 +1,20 @@
 package tp0.Ex1.V1;
 
-import java.util.Map;
-
 public class BoissonChaude {
-    private int idBF;
+    private int idBC;
 
     private Menu m = new Menu();
 
-    public BoissonChaude(int idBF){
-        this.idBF = idBF;
+    public BoissonChaude(int idBC){
+        this.idBC = idBC;
     }
     
-    public String nom(){
-        m.creer();
-
-        Map<String,Map<Integer,String>> menu = m.getMenu();
-       
-        return  menu.get("boissonChaude").get(idBF);
+    public String nom(){       
+        return   m.getMenu().get("boissonChaude").get(idBC);
     }
-    public double prix(){
-        m.creer();
-
+    public double prix() {
         m.prixBoissonChaude();
-        Map<Integer,Double>prix = m.getPrixBF();
-        return prix.get(idBF);
+        return m.getPrixBC().get(idBC);
     }
 }
 

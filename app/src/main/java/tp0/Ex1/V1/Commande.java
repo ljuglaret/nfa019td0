@@ -14,9 +14,10 @@ class Commande{
         this.cl = cl;
         this.service = service;
         this.serveur = serveur;
+        somme+=service.getPrix();
     }
 
-    public void ajoutR(Repas repas){
+    public void ajoutR(Repas repas) throws Exception{
         somme += repas.prix();
         recap.add(repas.nom() + " : " + repas.prix());
     } 

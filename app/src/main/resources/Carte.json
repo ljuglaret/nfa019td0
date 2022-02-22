@@ -1,0 +1,47 @@
+{
+    "platChaud" : [
+        {
+           
+            "nom":"omelette",
+            "prix":12.25
+        },
+        {
+            
+            "nom":"gratin dauphinois",
+            "prix":14.50
+        }
+    ],
+    "boissonChaude" : [
+        {
+            "nom":"cafe",
+            "prix":2.75
+        },
+        { 
+            "nom":"the",
+            "prix":4.20
+        }
+    ],
+
+    "boissonFroide" : [
+        {
+            "nom":"limonade",
+            "prix":6.0
+        },
+        { 
+            "nom":"jus d'orange",
+            "prix":3.30
+        }
+    ],
+
+    "boissonFroideA" : [
+        {
+            "nom":"vin",
+            "prix":5.45
+        },
+        { 
+            "nom":"champagne",
+            "prix":8.20
+        }
+    ]
+}
+

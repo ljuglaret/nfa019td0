@@ -1,4 +1,4 @@
-package tp0.Ex1.V1;
+package tp0.Ex1.V2;
 
 import java.util.HashMap;
 import java.util.Map;
