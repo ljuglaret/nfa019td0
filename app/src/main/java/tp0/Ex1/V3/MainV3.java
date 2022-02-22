@@ -6,8 +6,8 @@ public class MainV3 {
         Client cl = new Client(1);
         Serveur serveur = new Serveur(1234,"toto");
         Article comptoir = new ServiceComptoir();
-        Article repas = new PlatChaud(1);
-        Article bfa = new BoissonFroideA(1);
+        Article repas = new PlatChaud(0);
+        Article bfa = new BoissonFroideA(0);
         Article bf = new BoissonFroide(1);
         Article bc = new BoissonChaude(0);
         Commande com = new Commande(serveur,cl);

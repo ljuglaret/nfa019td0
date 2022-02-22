@@ -15,8 +15,7 @@ class Commande{
         this.service = service;
         this.serveur = serveur;
         somme+=service.getPrix();
-        
-      
+        recap.add(service.getNomService() + " : " + service.getPrix());
     }
 
     public void ajoutR(Repas repas) throws Exception{

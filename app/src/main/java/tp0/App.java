@@ -11,8 +11,10 @@ public class App {
     
     public static void main(String[] args) throws Exception{
         MainV1.exemple();
+        System.out.println("\n");
         MainV2.exemple();
+        System.out.println("\n");
         MainV3.exemple();
-
+        System.out.println("\n");
     }
 }
