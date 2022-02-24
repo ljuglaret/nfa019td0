@@ -7,15 +7,21 @@ import java.util.*;
 class Commande{
     private Client cl;
     private Serveur serveur;
+    private int id;
     private List<Article> recap = new ArrayList<>();
     private double add = 0 ;
 
-    public Commande(Serveur serveur,Client cl){
+    public Commande(Serveur serveur,Client cl, int id){
         this.cl = cl;
         this.serveur = serveur;
         this.add = 0 ;
+        this.id = id;
     }
 
+    public int getId() {
+        return id;
+    }
+    
     public void ajoutArticle(Article article) throws Exception{
        recap.add(article); 
     } 
@@ -45,6 +51,10 @@ class Commande{
 
     public double addition(){
         return this.add;
+    }
+
+    public Client getCl() {
+        return cl;
     }
 
    

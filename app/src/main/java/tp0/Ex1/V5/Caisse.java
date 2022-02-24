@@ -10,15 +10,12 @@ public class Caisse {
         lc = new HashMap<>();
     }   
 
-    public void ajoutCommande(int idCommande,Commande commande){
-        lc.put(idCommande,commande);
+    public void ajoutCommande(Commande commande){
+        lc.put(commande.getId(),commande);
     }
 
-    //calcule reste à rendre pour une commande
-
-    public double aRendre(int idCommande , double verseParLeClient){
+    public double aRendre(int idCommande ){
         Commande commande = lc.get(idCommande);
-        double totalAPayer = commande.addition() ;
-        return verseParLeClient - totalAPayer;
+        return  commande.getCl().paiement() - commande.addition();
     }
 }

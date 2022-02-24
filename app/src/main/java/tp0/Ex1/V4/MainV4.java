@@ -22,6 +22,6 @@ public class MainV4 {
         
        
         commande0.recap();
-       System.out.println("Total : "+ commande0.addition() + " euros");
+       System.out.println("Total V4 : "+ commande0.addition() + " euros");
     }
 }

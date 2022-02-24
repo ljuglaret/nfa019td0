@@ -7,6 +7,7 @@ import  tp0.Ex1.V1.MainV1;
 import  tp0.Ex1.V2.MainV2;
 import tp0.Ex1.V3.MainV3;
 import tp0.Ex1.V4.MainV4;
+import tp0.Ex1.V5.MainV5;
 
 public class App {
     
@@ -18,6 +19,8 @@ public class App {
         MainV3.exemple();
         System.out.println("\n");
         MainV4.exemple();
+        System.out.println("\n");
+        MainV5.exemple();
         System.out.println("\n");
     }
 }

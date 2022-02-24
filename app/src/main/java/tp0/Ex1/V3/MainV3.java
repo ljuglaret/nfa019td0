@@ -17,6 +17,6 @@ public class MainV3 {
         com.ajoutArticle(bf);
         com.ajoutArticle(comptoir);
         com.recap();
-        System.out.println("Total : "+ com.addition() + " euros");
+        System.out.println("Total V3 : "+ com.addition() + " euros");
     }
 }

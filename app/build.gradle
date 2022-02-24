@@ -6,16 +6,24 @@
  * User Manual available at https://docs.gradle.org/7.3.2/userguide/building_java_projects.html
  */
 
+
+
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
 }
+version = '0.1.0'
+
 
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
+run {
+    standardInput = System.in
+}
 dependencies {
     // Use JUnit test framework.
     testImplementation 'junit:junit:4.13.2'
@@ -30,3 +38,30 @@ application {
     // Define the main class for the application.
     mainClass = 'tp0.App'
 }
+
+
+tasks.named('jar') {
+    manifest {
+        attributes('Implementation-Title': 'tp0',
+                   'Implementation-Version':' 0.1.0',
+                   'Main-class' : 'tp0.App',
+                   'Multi-Release': 'true'
+                   )
+    }
+      
+   // from { ["connectionToTwitter.json","configBooksF.properties"]}
+    from configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  duplicatesStrategy = 'include'
+    
+}
+
+
+
+java {
+    withSourcesJar()
+}
+
+
+
+
+

@@ -1,17 +1,21 @@
 package tp0.Ex1.V1;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import java.io.FileReader;
+import java.nio.charset.StandardCharsets;
+import java.io.*;
 
-  
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 
 public class Menu {
     
+    ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    InputStream inputStream = null;
+
+
     private Map<String,Map<Integer,String>> menu = new HashMap<>();
 
     private Map<Integer,Double> prixRepas = new HashMap<>();
@@ -21,7 +25,11 @@ public class Menu {
 
     public void prixRepas() throws Exception{
         Map<Integer,String> repas = new HashMap<>();
-        Object obj = new JSONParser().parse(new FileReader("src/main/resources/Carte.json"));     
+        inputStream = classloader.getResourceAsStream("Carte.json");
+        InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+        BufferedReader reader = new BufferedReader(streamReader);
+
+        Object obj = new JSONParser().parse(reader);     
         JSONObject jo = (JSONObject) obj;
         
         JSONArray ja = (JSONArray) jo.get("platChaud");
@@ -39,7 +47,9 @@ public class Menu {
 
         Object obj = null;
         try{
-            obj = new JSONParser().parse(new FileReader("src/main/resources/Carte.json"));     
+            inputStream = classloader.getResourceAsStream("Carte.json");
+            InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+            obj = new JSONParser().parse(new BufferedReader(streamReader));     
         }
         catch(Exception e){
             System.out.println(e);
@@ -60,7 +70,9 @@ public class Menu {
     public void prixBoissonFroide(){
         Object obj = null;
         try{
-            obj = new JSONParser().parse(new FileReader("src/main/resources/Carte.json"));     
+            inputStream = classloader.getResourceAsStream("Carte.json");
+            InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+            obj = new JSONParser().parse(new BufferedReader(streamReader));    
         }
         catch(Exception e){
             System.out.println(e);
@@ -83,7 +95,9 @@ public class Menu {
     public void prixBoissonFroideA(){
         Object obj = null;
         try{
-            obj = new JSONParser().parse(new FileReader("src/main/resources/Carte.json"));     
+            inputStream = classloader.getResourceAsStream("Carte.json");
+            InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+            obj = new JSONParser().parse(new BufferedReader(streamReader));
         }
         catch(Exception e){
             System.out.println(e);
