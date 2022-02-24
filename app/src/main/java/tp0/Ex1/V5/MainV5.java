@@ -1,7 +1,5 @@
 package tp0.Ex1.V5;
 
-import java.util.Scanner;
-
 public class MainV5 {
     public static void exemple() throws Exception{
         
@@ -27,6 +25,5 @@ public class MainV5 {
         caisse.ajoutCommande( commande0);
        System.out.println("Total V5 : "+ commande0.addition() + " euros");
        System.out.println("+/-" + caisse.aRendre(commande0.getId()));
-    
     }
 }
