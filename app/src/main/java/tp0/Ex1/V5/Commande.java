@@ -4,7 +4,7 @@ package tp0.Ex1.V5;
 import java.util.*;
 
 
-class Commande{
+public class Commande{
     private Client cl;
     private Serveur serveur;
     private int id;

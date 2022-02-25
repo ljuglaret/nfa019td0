@@ -40,6 +40,12 @@ application {
 }
 
 
+test{
+    testLogging{
+        showStandardStreams = true
+    }
+}
+
 tasks.named('jar') {
     manifest {
         attributes('Implementation-Title': 'tp0',

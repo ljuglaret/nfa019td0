@@ -2,7 +2,7 @@ package tp0.Ex1.V5;
 
 import java.util.Scanner;
 
-class Client{
+public class Client{
     
     private int numeroClient;
     private double paiementClient = 0 ;
@@ -23,5 +23,6 @@ class Client{
         Scanner sc = new Scanner(System.in);
         this.paiementClient =  sc.nextDouble();
         return this.paiementClient;
+ 
     }
 }

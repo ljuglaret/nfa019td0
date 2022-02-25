@@ -24,6 +24,6 @@ public class MainV5 {
         commande0.recap();
         caisse.ajoutCommande( commande0);
        System.out.println("Total V5 : "+ commande0.addition() + " euros");
-       System.out.println("+/-" + caisse.aRendre(commande0.getId()));
+       System.out.println("la caisse doit rendre : " + caisse.aRendre(commande0.getId()));
     }
 }

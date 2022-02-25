@@ -1,6 +1,6 @@
 package tp0.Ex1.V5;
 
-class Serveur{
+public class Serveur{
     private int idServeur;
     private String prenomServeur;
 
