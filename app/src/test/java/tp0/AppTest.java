@@ -10,7 +10,7 @@ import tp0.Ex1.V5.*;
 import static org.junit.Assert.*;
 
 public class AppTest {
-
+/*
     @Test
     public void renduMonnaieOk(){
         Caisse caisse = new Caisse();
@@ -25,9 +25,9 @@ public class AppTest {
         System.out.println("a rendre " + (15.75 - commande0.addition()));
         assertTrue(caisse.peutRendreLaMonnaie(15.75 - commande0.addition()));
         
-    }
+    }*/
 
-    public void renduMonnaiePasOk(){
+    /*public void renduMonnaiePasOk(){
         Caisse caisse = new Caisse();
         Commande commande0 = new Commande(new Serveur(1234,"toto"), new Client(1),4658);  
         Article repas = new Article("platChaud",0);
@@ -40,6 +40,6 @@ public class AppTest {
         System.out.println("a rendre " + (27 - commande0.addition()));
         assertFalse(caisse.peutRendreLaMonnaie((27 - commande0.addition())));
         
-    }
+    }*/
   
 }

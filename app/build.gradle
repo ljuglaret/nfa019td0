@@ -32,6 +32,9 @@ dependencies {
     implementation 'com.google.guava:guava:30.1.1-jre'
 
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
+    implementation 'com.github.dpaukov:combinatoricslib3:3.3.0'
+  
 }
 
 application {
