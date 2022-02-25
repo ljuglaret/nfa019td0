@@ -16,6 +16,7 @@ public class Caisse {
         lc = new HashMap<>();
     }  
     
+    //NB : incorrect , ne considère pas toutes les sommes
     public  boolean peutRendreLaMonnaie(double aRendre){
         List<Double> sommesDisponibles = new ArrayList<>();
         double delta = Math.pow(10, -16);
@@ -27,7 +28,6 @@ public class Caisse {
             if (Math.abs(aRendre - v0) < delta){
                 return true;
             }
-
             for(int j = i+1;j<piecesEtBilletsDispos.size();j++){
                 v0 = v0 + valeurs.get(j)*piecesEtBilletsDispos.get(j);
                 sommesDisponibles.add(v0);
