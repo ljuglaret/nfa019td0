@@ -8,6 +8,12 @@ public abstract class Figure {
     private String couleurBordure;
     protected List<Point> coordonnees = new ArrayList<>();
     
+    public Figure(String couleurBordure,String couleurFond,List<Point> coordonnees){
+        couleurBordure = this.couleurBordure;
+        couleurFond = this.couleurFond;
+        this.coordonnees.addAll(coordonnees);
+    }
+
     public List<Point> getCoordonnees() {
         return coordonnees;
     }

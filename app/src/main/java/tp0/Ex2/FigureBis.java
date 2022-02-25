@@ -8,6 +8,12 @@ public abstract class FigureBis implements Transformable,Deplacable {
     private String couleurBordure;
     protected List<Point> coordonnees = new ArrayList<>();
 
+    public FigureBis(String couleurBordure,String couleurFond,List<Point> coordonnees){
+        this.couleurBordure = couleurBordure;
+        this.couleurFond = couleurFond;
+        this.coordonnees.addAll(coordonnees);
+    }
+
     public List<Point> getCoordonnees() {
         return coordonnees;
     }
@@ -25,9 +31,8 @@ public abstract class FigureBis implements Transformable,Deplacable {
         this.couleurFond = couleurFond;
     }
 
-
     @Override
-    public void modifierCoordonnees(List<Point> coordonnees) {
+    public void setCoordonnees(List<Point> coordonnees) {
                 this.coordonnees = coordonnees;
     }
 
@@ -52,4 +57,12 @@ public abstract class FigureBis implements Transformable,Deplacable {
             point.setX(2*x - point.getX());
         }
     }
+
+    public void afficherInfo(){
+       System.out.print("Couleur bordure : " + couleurBordure 
+                        + " , Couleur fond : " + couleurFond);
+                       
+    }
+
+   
 }

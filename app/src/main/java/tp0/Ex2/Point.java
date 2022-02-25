@@ -24,4 +24,8 @@ public class Point {
    public double getY() {
        return y;
    }
+
+   public String infoPoint(){
+       return " ( " + x + " , " + y + " )" ;
+   }
 }

@@ -12,6 +12,7 @@ import tp0.Ex1.V5.MainV5;
 public class App {
     
     public static void main(String[] args) throws Exception{
+        tp0.Ex2.Main.exemple();
         MainV1.exemple();
         System.out.println("\n");
         MainV2.exemple();
